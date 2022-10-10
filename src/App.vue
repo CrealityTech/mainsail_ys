@@ -25,7 +25,7 @@
 
 <template>
     <v-app dark :style="cssVars">
-        <template v-if="socketIsConnected && guiIsReady">
+        <template v-if="socketIsConnected">
             <the-sidebar></the-sidebar>
             <the-topbar></the-topbar>
 

@@ -6,10 +6,10 @@ import { getters } from '@/store/socket/getters'
 import { RootState } from '@/store/types'
 
 export const getDefaultState = (): SocketState => {
-    const hostname = (import.meta.env.VUE_APP_HOSTNAME as string) || window.location.hostname
+    const ip = localStorage.getItem('ip') || window.location.hostname
+    const hostname = (import.meta.env.VUE_APP_HOSTNAME as string) || ip
     const defaultPort = window.location.port || (window.location.protocol === 'https:' ? 443 : 80)
-    const port = import.meta.env.VUE_APP_PORT ? Number(import.meta.env.VUE_APP_PORT) : Number(defaultPort)
-
+    const port = import.meta.env.VUE_APP_PORT ? Number(import.meta.env.VUE_APP_PORT) : 7125
     return {
         hostname,
         port,
