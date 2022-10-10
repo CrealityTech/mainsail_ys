@@ -3,7 +3,7 @@ node_modules
 design
 *.log
 packages/test
-dist
+# dist
 temp
 .vuerc
 .version
